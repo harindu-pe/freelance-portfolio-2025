@@ -1,5 +1,11 @@
+import Header from "@/sections/Header";
+import Hero from "@/sections/Hero";
+
 export default function Home() {
   return (
-    <div className="grid grid-cols-2 bg-fuchsia-100 text-white">hello</div>
+    <>
+      <Header />
+      <Hero />
+    </>
   );
 }

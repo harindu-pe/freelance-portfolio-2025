@@ -120,3 +120,20 @@
     @apply bg-background text-foreground;
   }
 }
+
+@utility container {
+  padding-inline: 1rem;
+  margin-inline: auto;
+
+  @variant sm {
+    padding-inline: 1rem;
+  }
+
+  @variant lg {
+    padding-inline: 1rem;
+  }
+
+  @variant xl {
+    padding-inline: 1rem;
+  }
+}
