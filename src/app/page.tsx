@@ -1,3 +1,4 @@
+import Footer from "@/sections/Footer";
 import Header from "@/sections/Header";
 import Hero from "@/sections/Hero";
 import Services from "@/sections/Services";
@@ -8,6 +9,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Services />
+      <Footer />
     </>
   );
 }

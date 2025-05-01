@@ -29,8 +29,8 @@ export default function Header() {
 
   return (
     <>
-      <section className="fixed top-0 z-50 w-full py-2 lg:py-4">
-        <div className="container max-w-[25rem] md:max-w-5xl">
+      <section id="header" className="fixed top-0 z-50 w-full py-2 lg:py-4">
+        <div className="container max-w-[26rem] md:max-w-5xl">
           <div
             className={twMerge(
               "bg rounded-xl border border-transparent bg-white transition-all duration-300 ease-in",
@@ -45,7 +45,7 @@ export default function Header() {
                   alt="Layers Logo"
                   className="ml-2 h-10 w-auto"
                 />
-                <span className="ml-2 font-serif text-xl font-semibold">
+                <span className="ml-2 font-serif text-xl font-semibold tracking-wide">
                   Harindu
                 </span>
               </div>
