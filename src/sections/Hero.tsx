@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import Ticker from "@/components/Ticker";
 import { CornerDownLeft } from "lucide-react";
 
 const Hero = () => {
@@ -31,6 +32,7 @@ const Hero = () => {
             </Button>
           </div>
         </div>
+        <Ticker />
       </div>
     </section>
   );
