@@ -1,4 +1,4 @@
-import CallToAction from "@/components/CallToAction";
+import FooterCallToAction from "@/components/FooterCallToAction";
 import SocialIcon from "@/components/SocialIcon";
 import { FaGithub, FaInstagram } from "react-icons/fa";
 import { GrLinkedinOption } from "react-icons/gr";
@@ -60,7 +60,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="mt-8">
-            <CallToAction />
+            <FooterCallToAction />
           </div>
           <div className="mt-12 ml-2 text-center text-sm">
             Copyright © 2025 Harindu Egalla

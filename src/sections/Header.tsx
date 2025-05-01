@@ -105,7 +105,7 @@ export default function Header() {
                   variant="primary"
                   className="hidden items-center md:inline-flex"
                 >
-                  Book a free call
+                  Contact Me
                 </Button>
               </div>
             </div>
@@ -128,7 +128,7 @@ export default function Header() {
                       </a>
                     ))}
                     <Button variant="primary" className="w-full text-sm">
-                      Book a free call
+                      Contact Me
                     </Button>
                   </div>
                 </motion.div>

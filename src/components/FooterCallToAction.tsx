@@ -2,7 +2,7 @@
 import { AnimationPlaybackControls, motion, useAnimate } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
-export default function CallToAction() {
+export default function FooterCallToAction() {
   const [isHovered, setIsHovered] = useState(false);
   const animation = useRef<AnimationPlaybackControls>(null);
   const [scope, animate] = useAnimate();
