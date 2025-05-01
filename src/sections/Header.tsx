@@ -1,30 +1,54 @@
 "use client";
 
+import logoImage from "@/assets/images/mapleLeaf.png";
 import Button from "@/components/Button";
+import { navLinks } from "@/constants";
 import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
+import Image from "next/image";
 import { twMerge } from "tailwind-merge";
-
-const navLinks = [
-  { label: "Home", href: "#" },
-  { label: "Features", href: "#features" },
-  { label: "Integrations", href: "#integrations" },
-  { label: "FAQs", href: "#faqs" },
-];
+import { useEffect, useState } from "react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Call once on mount
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <section className="fixed top-0 z-50 w-full py-4 lg:py-8">
+      <section className="fixed top-0 z-50 w-full py-4 lg:py-4">
         <div className="container max-w-5xl">
-          <div className="rounded-[27px] border border-white/15 bg-neutral-950/70 backdrop-blur md:rounded-full">
-            <div className="grid grid-cols-2 items-center p-2 px-4 md:pr-2 lg:grid-cols-3">
-              <div className="">
-                <span className="ml-2 text-lg text-white">Harindu</span>
+          <div
+            className={twMerge(
+              "bg rounded-xl border border-transparent bg-white transition-all duration-300 ease-in",
+              hasScrolled && "shadow-md",
+              isOpen && "border border-black/15",
+            )}
+          >
+            <div className="grid grid-cols-2 items-center p-2 px-4 md:pr-2 lg:grid-cols-3 lg:p-3 lg:pr-3">
+              <div className="flex items-center">
+                <Image
+                  src={logoImage}
+                  alt="Layers Logo"
+                  className="ml-2 h-10 w-auto"
+                />
+                <span className="ml-2 text-xl font-semibold">Harindu</span>
               </div>
               <div className="hidden items-center justify-center lg:flex">
-                <nav className="flex gap-6 font-medium">
+                <nav className="flex gap-6 text-sm font-semibold">
                   {navLinks.map((link) => (
                     <a href={link.href} key={link.label}>
                       {link.label}
@@ -79,7 +103,7 @@ export default function Header() {
                   variant="primary"
                   className="hidden items-center md:inline-flex"
                 >
-                  Contact Me
+                  Book a free call
                 </Button>
               </div>
             </div>
@@ -91,13 +115,19 @@ export default function Header() {
                   exit={{ height: 0 }}
                   className="overflow-hidden"
                 >
-                  <div className="flex flex-col items-center gap-4 py-4">
+                  <div className="flex flex-col items-center gap-8 p-4">
                     {navLinks.map((link) => (
-                      <a key={link.label} href={link.href} className="">
+                      <a
+                        key={link.label}
+                        href={link.href}
+                        className="font-semibold"
+                      >
                         {link.label}
                       </a>
                     ))}
-                    <Button variant="primary">Contact Me</Button>
+                    <Button variant="primary" className="w-full text-sm">
+                      Book a free call
+                    </Button>
                   </div>
                 </motion.div>
               )}
