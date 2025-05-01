@@ -1,19 +1,36 @@
+import Button from "@/components/Button";
+import { CornerDownLeft } from "lucide-react";
+
 const Hero = () => {
   return (
-    <section id="hero" className="py-24 pb-[200vh]">
+    <section id="hero" className="bg-white pb-16">
       <div className="container">
-        <div className="flex justify-center">
-          <div className="inline-flex rounded-full bg-gradient-to-r from-purple-400 to-pink-400 px-3 py-1 font-semibold text-neutral-950">
-            ✨ Available Now
+        <div className="rounded-lg bg-gradient-to-b from-[#e36414] to-transparent pb-8">
+          <div className="flex justify-center">
+            <div className="mt-8 inline-flex rounded-lg bg-black px-4 py-3 font-sans text-xs font-semibold text-white uppercase md:mt-10 lg:py-4">
+              ✨ Available For New Projects
+            </div>
+          </div>
+          <h1 className="mx-auto mt-4 max-w-md text-center font-serif text-5xl leading-10 font-semibold text-balance md:mt-8 md:text-6xl md:leading-14 lg:max-w-3xl lg:leading-none lg:md:text-8xl">
+            Impactful design crafted for growth
+          </h1>
+          <p className="mx-auto mt-6 max-w-xs text-center font-sans text-base text-black md:mt-8 md:max-w-md lg:max-w-lg lg:text-lg">
+            Say goodbye to clunky tools and hello to a seamless experience.
+            Layers brings all your operations under one roof.
+          </p>
+          <div className="mt-6 flex justify-center gap-2 md:mt-8">
+            <Button variant="primary" className="text-base lg:h-14">
+              Get Started Today
+            </Button>
+            <Button
+              variant="secondary"
+              className="flex items-center gap-2 lg:h-14"
+            >
+              View Work
+              <CornerDownLeft size={15} />
+            </Button>
           </div>
         </div>
-        <h1 className="mt-6 text-center text-6xl font-medium md:text-7xl lg:text-8xl">
-          Impactful design, created effortlessly
-        </h1>
-        <p className="mx-auto mt-8 max-w-2xl text-center text-xl text-white/50">
-          Say goodbye to clunky tools and hello to a seamless experience. Layers
-          brings all your operations under one roof.
-        </p>
       </div>
     </section>
   );

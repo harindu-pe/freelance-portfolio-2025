@@ -29,8 +29,8 @@ export default function Header() {
 
   return (
     <>
-      <section className="fixed top-0 z-50 w-full py-4 lg:py-4">
-        <div className="container max-w-5xl">
+      <section className="fixed top-0 z-50 w-full py-2 lg:py-4">
+        <div className="container max-w-[25rem] md:max-w-5xl">
           <div
             className={twMerge(
               "bg rounded-xl border border-transparent bg-white transition-all duration-300 ease-in",
@@ -45,9 +45,11 @@ export default function Header() {
                   alt="Layers Logo"
                   className="ml-2 h-10 w-auto"
                 />
-                <span className="ml-2 text-xl font-semibold">Harindu</span>
+                <span className="ml-2 font-serif text-xl font-semibold">
+                  Harindu
+                </span>
               </div>
-              <div className="hidden items-center justify-center lg:flex">
+              <div className="hidden items-center justify-center font-sans lg:flex">
                 <nav className="flex gap-6 text-sm font-semibold">
                   {navLinks.map((link) => (
                     <a href={link.href} key={link.label}>
@@ -120,7 +122,7 @@ export default function Header() {
                       <a
                         key={link.label}
                         href={link.href}
-                        className="font-semibold"
+                        className="font-sans font-semibold"
                       >
                         {link.label}
                       </a>
