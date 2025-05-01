@@ -1,12 +1,13 @@
 "use client";
 
 import logoImage from "@/assets/images/mapleLeaf.png";
-import Button from "@/components/Button";
+import { Button } from "@/components/ui/button";
 import { navLinks } from "@/constants";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
-import { twMerge } from "tailwind-merge";
+import Link from "next/link";
 import { useEffect, useState } from "react";
+import { twMerge } from "tailwind-merge";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +31,7 @@ export default function Header() {
   return (
     <>
       <section id="header" className="fixed top-0 z-50 w-full py-2 lg:py-4">
-        <div className="container max-w-[26rem] md:max-w-5xl">
+        <div className="container max-w-[26rem] md:max-w-3xl lg:md:max-w-4xl">
           <div
             className={twMerge(
               "bg rounded-xl border border-transparent bg-white transition-all duration-300 ease-in",
@@ -45,7 +46,7 @@ export default function Header() {
                   alt="Layers Logo"
                   className="ml-2 h-10 w-auto"
                 />
-                <span className="ml-2 font-serif text-xl font-semibold tracking-wide">
+                <span className="ml-2 font-serif text-xl font-semibold">
                   Harindu
                 </span>
               </div>
@@ -100,12 +101,11 @@ export default function Header() {
                     )}
                   ></line>
                 </svg>
-
                 <Button
-                  variant="primary"
-                  className="hidden items-center md:inline-flex"
+                  asChild
+                  className="hidden h-10 font-sans md:inline-flex"
                 >
-                  Contact Me
+                  <Link href="#callToAction">Contact Me</Link>
                 </Button>
               </div>
             </div>
@@ -122,13 +122,13 @@ export default function Header() {
                       <a
                         key={link.label}
                         href={link.href}
-                        className="font-sans font-semibold"
+                        className="font-sans text-sm font-semibold"
                       >
                         {link.label}
                       </a>
                     ))}
-                    <Button variant="primary" className="w-full text-sm">
-                      Contact Me
+                    <Button asChild className="h-10 w-full font-sans">
+                      <Link href="#callToAction">Contact Me</Link>
                     </Button>
                   </div>
                 </motion.div>

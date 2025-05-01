@@ -1,10 +1,8 @@
-import Button from "@/components/Button";
 import ContactForm from "@/components/ContactForm";
-import React from "react";
 
 const CallToAction = () => {
   return (
-    <section className="py-8">
+    <section id="callToAction" className="pt-24 pb-8">
       <div className="container">
         <div className="rounded-lg bg-[#e36414] py-12">
           <div className="flex flex-col items-center justify-center">

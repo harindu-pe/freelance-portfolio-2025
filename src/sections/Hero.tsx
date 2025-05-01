@@ -1,6 +1,7 @@
-import Button from "@/components/Button";
 import Ticker from "@/components/Ticker";
+import { Button } from "@/components/ui/button";
 import { CornerDownLeft } from "lucide-react";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -20,15 +21,24 @@ const Hero = () => {
             Layers brings all your operations under one roof.
           </p>
           <div className="mt-6 flex justify-center gap-2 md:mt-8">
-            <Button variant="primary" className="text-base lg:h-14">
-              Get Started Today
+            <Button
+              variant="default"
+              size="lg"
+              className="h-12 font-sans lg:h-14"
+              asChild
+            >
+              <Link href="#callToAction">Get Started Today</Link>
             </Button>
             <Button
-              variant="secondary"
-              className="flex items-center gap-2 lg:h-14"
+              variant="ghost"
+              size="lg"
+              className="h-12 font-sans lg:h-14"
+              asChild
             >
-              View Work
-              <CornerDownLeft size={15} />
+              <Link href="#callToAction" className="flex items-center gap-2">
+                View Work
+                <CornerDownLeft size={15} />
+              </Link>
             </Button>
           </div>
         </div>

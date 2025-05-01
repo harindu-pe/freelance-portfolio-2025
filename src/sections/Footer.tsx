@@ -1,17 +1,33 @@
 import FooterCallToAction from "@/components/FooterCallToAction";
 import SocialIcon from "@/components/SocialIcon";
+import { Button } from "@/components/ui/button";
 import { FaGithub, FaInstagram } from "react-icons/fa";
 import { GrLinkedinOption } from "react-icons/gr";
 import { TfiEmail } from "react-icons/tfi";
+import { ArrowBigUpDash } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <section className="py-8 font-sans text-white">
       <div className="container">
-        <div className="rounded-xl bg-black px-4 py-8 font-sans">
-          <div className="xl:mr-2 xl:flex xl:justify-between">
+        <div className="relative rounded-xl bg-black px-4 py-8 font-sans">
+          <div className="absolute -top-1 -right-1 rounded-bl-xl bg-white">
+            <Button
+              asChild
+              variant="ghost"
+              size="lg"
+              className="border-none text-black shadow-none"
+            >
+              <Link href="#header" className="text-sm">
+                Scroll To Top
+                <ArrowBigUpDash />
+              </Link>
+            </Button>
+          </div>
+          <div className="xl:mr-24 xl:flex xl:justify-between">
             <div>
-              <div className="ml-2 font-serif text-2xl font-semibold tracking-wider">
+              <div className="ml-2 font-serif text-2xl font-semibold tracking-wide">
                 Harindu
               </div>
               <div className="mt-6 flex gap-1">
