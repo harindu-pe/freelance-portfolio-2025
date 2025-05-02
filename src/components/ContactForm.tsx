@@ -15,6 +15,9 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Card, CardContent } from "./ui/card";
 import { Textarea } from "./ui/textarea";
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
+import { toast } from "sonner";
 
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -25,6 +28,9 @@ const contactSchema = z.object({
 type ContactFormValues = z.infer<typeof contactSchema>;
 
 const ContactForm = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [loading, setLoading] = useState(false);
+
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -34,9 +40,27 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = (data: ContactFormValues) => {
-    console.log("Form submitted:", data);
-    // Add your logic here (API call, toast, etc.)
+  const onSubmit = async (data: ContactFormValues) => {
+    if (!formRef.current) return;
+    console.log(data);
+
+    try {
+      if (formRef.current) {
+        setLoading(true);
+        await emailjs.sendForm(
+          process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE_ID as string,
+          process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE_ID as string,
+          formRef.current,
+          process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY,
+        );
+        form.reset();
+        toast("Your message has been sent.");
+      }
+    } catch (error) {
+      console.error("EmailJS error:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -44,6 +68,7 @@ const ContactForm = () => {
       <CardContent>
         <Form {...form}>
           <form
+            ref={formRef}
             onSubmit={form.handleSubmit(onSubmit)}
             className="space-y-8 bg-white font-sans"
           >
@@ -104,10 +129,11 @@ const ContactForm = () => {
             />
             <Button
               size="lg"
+              disabled={loading}
               type="submit"
-              className="h-12 bg-[#fb5607] font-sans lg:h-14"
+              className="h-12 w-40 cursor-pointer bg-[#fb5607] font-sans lg:h-14"
             >
-              Send Message
+              {loading ? "Sending" : "Send Message"}
             </Button>
           </form>
         </Form>

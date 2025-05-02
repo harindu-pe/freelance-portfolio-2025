@@ -53,9 +53,9 @@ export default function Header() {
               <div className="hidden items-center justify-center font-sans lg:flex">
                 <nav className="flex gap-6 text-sm">
                   {navLinks.map((link) => (
-                    <a href={link.href} key={link.label}>
+                    <Link href={link.href} key={link.label}>
                       {link.label}
-                    </a>
+                    </Link>
                   ))}
                 </nav>
               </div>
@@ -119,13 +119,13 @@ export default function Header() {
                 >
                   <div className="flex flex-col items-center gap-8 p-4">
                     {navLinks.map((link) => (
-                      <a
+                      <Link
                         key={link.label}
                         href={link.href}
                         className="font-sans text-sm font-semibold"
                       >
                         {link.label}
-                      </a>
+                      </Link>
                     ))}
                     <Button asChild className="h-10 w-full font-sans">
                       <Link href="#callToAction">Contact Me</Link>

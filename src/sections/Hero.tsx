@@ -16,9 +16,10 @@ const Hero = () => {
           <h1 className="mx-auto mt-4 max-w-md text-center font-serif text-5xl leading-10 font-semibold text-balance md:mt-8 md:text-6xl md:leading-14 lg:max-w-3xl lg:leading-none lg:md:text-8xl">
             Impactful design crafted for growth
           </h1>
-          <p className="mx-auto mt-6 max-w-xs text-center font-sans text-base text-black text-gray-800 md:mt-8 md:max-w-md lg:max-w-lg lg:text-lg">
-            Say goodbye to clunky tools and hello to a seamless experience.
-            Layers brings all your operations under one roof.
+          <p className="mx-auto mt-6 max-w-xs text-center font-sans text-base text-gray-800 md:mt-8 md:max-w-md lg:max-w-lg lg:text-lg">
+            I&apos;m a front-end developer who wants to turn your creative ideas
+            into reality. Using the latest front-end tools and frameworks, I
+            bridge creativity with functionality.
           </p>
           <div className="mt-6 flex justify-center gap-2 md:mt-8">
             <Button

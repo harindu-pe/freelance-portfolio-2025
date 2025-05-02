@@ -21,7 +21,7 @@ export default function Ticker() {
               x: "-50%",
             }}
             transition={{ duration: 40, ease: "linear", repeat: Infinity }}
-            className="flex flex-none gap-24 pr-24 font-sans"
+            className="flex flex-none gap-16 pr-16 font-sans md:gap-24 md:pr-24"
           >
             {Array.from({ length: 2 }).map((_, i) => (
               <Fragment key={i}>

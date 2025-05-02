@@ -52,7 +52,7 @@ const WorkCard = ({
           {description}
         </div>
         <Button asChild variant="outline" className="size-10">
-          <Link href={`${link}`}>
+          <Link href={`${link}`} target="_blank" rel="noopener noreferrer">
             <SquareArrowOutUpRight />
           </Link>
         </Button>

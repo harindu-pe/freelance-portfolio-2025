@@ -3,7 +3,10 @@ import landingPage2 from "@/assets/images/landingPage2.png";
 import landingPage3 from "@/assets/images/landingPage3.png";
 import landingPage4 from "@/assets/images/landingPage4.png";
 
-const navLinks = [{ label: "Work", href: "#work" }];
+const navLinks = [
+  { label: "Work", href: "#work" },
+  { label: "Blog", href: "https://mapleascent.wordpress.com/" },
+];
 
 const workTemplates = [
   {
