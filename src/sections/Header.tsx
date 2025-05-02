@@ -51,7 +51,7 @@ export default function Header() {
                 </span>
               </Link>
               <div className="hidden items-center justify-center font-sans lg:flex">
-                <nav className="flex gap-6 text-sm font-semibold">
+                <nav className="flex gap-6 text-sm">
                   {navLinks.map((link) => (
                     <a href={link.href} key={link.label}>
                       {link.label}

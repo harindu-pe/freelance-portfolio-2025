@@ -12,11 +12,11 @@ const CallToAction = () => {
             </div>
             <div className="flex flex-col items-center justify-center">
               <h1 className="mt-8 font-sans text-4xl font-semibold md:text-5xl lg:text-6xl xl:lg:text-7xl">
-                Let's Collab!
+                Let&apos;s Collab!
               </h1>
               <p className="mt-6 max-w-xs text-center font-sans md:max-w-sm lg:text-lg">
-                Fill the contact form or send me an email and let's see if we
-                are a good fit.
+                Fill the contact form or send me an email and let&apos;s see if
+                we are a good fit.
               </p>
               <div className="mt-8 flex items-center gap-2 font-sans font-semibold tracking-wide lg:text-lg">
                 <Avatar>
