@@ -2,6 +2,7 @@ import landingPage1 from "@/assets/images/landingPage1.png";
 import landingPage2 from "@/assets/images/landingPage2.png";
 import landingPage3 from "@/assets/images/landingPage3.png";
 import landingPage4 from "@/assets/images/landingPage4.png";
+import landingPage5 from "@/assets/images/landingPage5.png";
 
 const navLinks = [
   { label: "Work", href: "#work" },
@@ -11,22 +12,22 @@ const navLinks = [
 const workTemplates = [
   {
     id: 1,
-    title: "Dark Landing Page",
+    title: "Layers",
     image: landingPage1,
-    year: "2024",
+    year: "2025",
     description:
-      "Stunning 3D Animated Portfolio Website with Next.js 14, Three.js, GSAP, and Prismic",
-    techStack: ["NextJS", "React"],
-    link: "https://landing-page-author.vercel.app/",
+      "A responsive, accessible landing page that adapts beautifully across devices.",
+    techStack: ["NextJS", "React", "Framer Motion"],
+    link: "https://landing-page-3-kappa.vercel.app/",
   },
   {
     id: 2,
-    title: "Animated Landing Page",
+    title: "Awwwards",
     image: landingPage2,
     year: "2024",
     description:
-      "Sleek Website Built with Next.js 14, Tailwind CSS, and Framer Motion for Smooth Animations",
-    techStack: ["NextJS", "React"],
+      "A visually compelling layout structured to boost engagement and retention.",
+    techStack: ["NextJS", "React", "Tailwind CSS"],
     link: "https://portfolio-awwwards.vercel.app/",
   },
   {
@@ -35,19 +36,29 @@ const workTemplates = [
     image: landingPage3,
     year: "2024",
     description:
-      "Beverage Brand Website Designed with Next.js 14, Shadcn UI, and Smooth Scroll Animations",
-    techStack: ["NextJS", "React"],
+      "An engaging homepage built to communicate product value quickly and clearly.",
+    techStack: ["NextJS", "React", "GSAP", "Prismic"],
     link: "https://fizzi-nine.vercel.app/",
   },
   {
     id: 4,
-    title: "SnackNation",
+    title: "Light SaaS",
     image: landingPage4,
     year: "2024",
     description:
-      "An E-commerce Snack Store Built with Next.js 14, Sanity CMS, and WhatsApp Integration",
-    techStack: ["NextJS", "React"],
-    link: "https://www.snacknationtz.com/",
+      "A polished landing page crafted to elevate brand presence and build user trust.",
+    techStack: ["NextJS", "React", "Tailwind CSS"],
+    link: "https://landing-page-saas-nine.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "Glisten",
+    image: landingPage5,
+    year: "2024",
+    description:
+      "A multi-section landing page built to guide users through key product features.",
+    techStack: ["NextJS", "React", "Prismic"],
+    link: "https://glisten-ecru.vercel.app/",
   },
 ];
 

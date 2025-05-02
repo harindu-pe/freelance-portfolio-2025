@@ -32,7 +32,7 @@ const WorkCard = ({
     <Card className="gap-0 rounded-lg border-none bg-white pt-1 shadow-none">
       <CardHeader className="aspect-video px-1 py-0">
         <CardTitle>
-          <Image src={image} alt="" className="rounded-lg" />
+          <Image src={image} alt="" className="rounded-lg border" />
         </CardTitle>
       </CardHeader>
       <CardContent className="">
