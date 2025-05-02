@@ -35,7 +35,7 @@ const Hero = () => {
               className="h-12 font-sans lg:h-14"
               asChild
             >
-              <Link href="#callToAction" className="flex items-center gap-2">
+              <Link href="#work" className="flex items-center gap-2">
                 View Work
                 <CornerDownLeft size={15} />
               </Link>

@@ -59,11 +59,9 @@ const Footer = () => {
                 <div>
                   <div>
                     <h1 className="mb-4 text-lg font-semibold">Contact Me</h1>
-                    <span>
-                      <a href="mailto:harindu.pe@gmail.com">
-                        harindu.pe@gmail.com
-                      </a>
-                    </span>
+                    <a href="mailto:harindu.pe@gmail.com">
+                      harindu.pe@gmail.com
+                    </a>
                   </div>
                   <div>
                     <h1 className="mt-8 mb-4 text-lg font-semibold">

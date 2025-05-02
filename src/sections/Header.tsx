@@ -40,7 +40,7 @@ export default function Header() {
             )}
           >
             <div className="grid grid-cols-2 items-center p-2 px-4 md:pr-2 lg:grid-cols-3 lg:p-3 lg:pr-3">
-              <div className="flex items-center">
+              <Link href="/" className="flex items-center">
                 <Image
                   src={logoImage}
                   alt="Layers Logo"
@@ -49,7 +49,7 @@ export default function Header() {
                 <span className="ml-2 font-serif text-xl font-semibold">
                   Harindu
                 </span>
-              </div>
+              </Link>
               <div className="hidden items-center justify-center font-sans lg:flex">
                 <nav className="flex gap-6 text-sm font-semibold">
                   {navLinks.map((link) => (
