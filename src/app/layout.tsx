@@ -1,7 +1,8 @@
+import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -16,6 +17,13 @@ const playfairDisplay = Playfair_Display({
 export const metadata: Metadata = {
   title: "Web Developer | Harindu",
   description: "Turning your creative ideas into reality",
+  openGraph: {
+    images: [
+      {
+        url: "/mapleLeaf.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -30,6 +38,7 @@ export default function RootLayout({
       >
         {children}
         <Toaster />
+        <Analytics />
       </body>
     </html>
   );
