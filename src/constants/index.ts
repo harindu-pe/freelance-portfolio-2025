@@ -14,9 +14,9 @@ const workTemplates = [
     id: 1,
     title: "Layers",
     image: landingPage1,
-    year: "2025",
+    year: "2025 ",
     description:
-      "A responsive, accessible landing page that adapts beautifully across devices.",
+      "A responsive, accessible landing page that adapts beautifully across devices [Design: Frontend Tribe].",
     techStack: ["NextJS", "React", "Framer Motion"],
     link: "https://landing-page-3-kappa.vercel.app/",
   },
@@ -26,7 +26,7 @@ const workTemplates = [
     image: landingPage2,
     year: "2024",
     description:
-      "A visually compelling layout structured to boost engagement and retention.",
+      "A visually compelling layout structured to boost engagement and retention [Design: JavaScript Mastery].",
     techStack: ["NextJS", "React", "Tailwind CSS"],
     link: "https://portfolio-awwwards.vercel.app/",
   },
@@ -36,7 +36,7 @@ const workTemplates = [
     image: landingPage3,
     year: "2024",
     description:
-      "An engaging homepage built to communicate product value quickly and clearly.",
+      "An engaging homepage built to communicate product value quickly and clearly [Design: Prismic].",
     techStack: ["NextJS", "React", "GSAP", "Prismic"],
     link: "https://fizzi-nine.vercel.app/",
   },
@@ -46,7 +46,7 @@ const workTemplates = [
     image: landingPage4,
     year: "2024",
     description:
-      "A polished landing page crafted to elevate brand presence and build user trust.",
+      "A polished landing page crafted to elevate brand presence and build user trust [Design: Frontend Tribe].",
     techStack: ["NextJS", "React", "Tailwind CSS"],
     link: "https://landing-page-saas-nine.vercel.app/",
   },
@@ -56,7 +56,7 @@ const workTemplates = [
     image: landingPage5,
     year: "2024",
     description:
-      "A multi-section landing page built to guide users through key product features.",
+      "A multi-section landing page built to guide users through key product features [Design: Prismic].",
     techStack: ["NextJS", "React", "Prismic"],
     link: "https://glisten-ecru.vercel.app/",
   },
