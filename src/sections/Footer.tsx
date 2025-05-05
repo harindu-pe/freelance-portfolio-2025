@@ -59,7 +59,7 @@ const Footer = () => {
                 <div>
                   <div>
                     <h1 className="mb-4 text-lg font-semibold">Contact Me</h1>
-                    <a href="mailto:harindu.pe@gmail.com">
+                    <a href="mailto:harindu.pe@gmail.com" className="break-all">
                       harindu.pe@gmail.com
                     </a>
                   </div>
