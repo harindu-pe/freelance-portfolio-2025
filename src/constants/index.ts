@@ -26,7 +26,7 @@ const workTemplates = [
     image: landingPage2,
     year: "2024",
     description:
-      "A visually compelling layout structured to boost engagement and retention [Design: JavaScript Mastery].",
+      "A visually compelling layout structured to boost engagement [Design: JavaScript Mastery].",
     techStack: ["NextJS", "React", "Tailwind CSS"],
     link: "https://portfolio-awwwards.vercel.app/",
   },
