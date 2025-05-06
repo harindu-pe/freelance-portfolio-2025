@@ -54,7 +54,7 @@ const WorkCarousel = () => {
               key={template.id}
               className="pl-1 md:basis-1/2 lg:basis-1/3"
             >
-              <div className="p-1">
+              <div className="h-full p-1">
                 <WorkCard
                   title={template.title}
                   image={template.image}

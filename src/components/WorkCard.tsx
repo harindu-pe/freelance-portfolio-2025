@@ -29,16 +29,16 @@ const WorkCard = ({
   link,
 }: workTemplates) => {
   return (
-    <Card className="gap-0 rounded-lg border-none bg-white pt-1 shadow-none">
+    <Card className="h-full gap-0 rounded-lg border-none bg-white pt-1 shadow-none">
       <CardHeader className="aspect-video px-1 py-0">
         <CardTitle>
           <Image src={image} alt="" className="rounded-lg border" />
         </CardTitle>
       </CardHeader>
       <CardContent className="">
-        <div className="mt-1 space-x-2">
+        <div className="mt-1 space-x-1.5">
           {techStack?.map((tech, index) => (
-            <Badge key={index} className="px-2 py-1 font-sans">
+            <Badge key={index} className="px-2 py-1 font-sans text-xs">
               {tech}
             </Badge>
           ))}
