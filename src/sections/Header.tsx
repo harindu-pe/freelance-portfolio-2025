@@ -1,6 +1,7 @@
 "use client";
 
 import logoImage from "@/assets/images/mapleLeaf.png";
+import { AIChatButton } from "@/components/AIChatButton";
 import { Button } from "@/components/ui/button";
 import { navLinks } from "@/constants";
 import { AnimatePresence, motion } from "motion/react";
@@ -59,7 +60,8 @@ export default function Header() {
                   ))}
                 </nav>
               </div>
-              <div className="flex justify-end gap-4">
+              <div className="flex items-center justify-end gap-4">
+                <AIChatButton />
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
